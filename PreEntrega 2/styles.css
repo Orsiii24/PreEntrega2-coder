@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    color: rgb(95, 23, 189);
+    font-size: 36px;
+}
+
+body{
+    margin: 0;
+    font-family:'Manrope',  sans-serif; ;
+    background-color: rgb(30, 28, 31);
+}
+
+h1{
+    text-align: center;
+    
+}
+
+/* ESTILOS DE GALERIA */
+
+.contenedor-galeria{
+    background-color:rgb(95, 23, 189);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 150px;
+    padding: 20px;
+    grid-gap: 10px;
+    border-radius: 5px;
+}
+
+.galeria-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+.galeria-item{
+    position: relative;
+}
+
+
+.titulo-paisaje {
+    position: absolute;
+    bottom: 0;
+    color: aliceblue;
+    background: linear-gradient(rgba(255,255,255,0),rgba(0,0,0,1));
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.galeria-item:nth-child(1){
+    grid-column-start: span 2;
+}
+
+.galeria-item:nth-child(3){
+    grid-row-start: span 3;
+}
+.galeria-item:nth-child(5){
+    grid-row-start: span 2;
+}
+
+.galeria-item:nth-child(6){
+    grid-row-start: span 2;
+}
+.galeria-item:nth-child(9){
+    grid-column-start: span 2 ;
+}
+
+/*Media querys */
+
+@media(min-width:768px){
+    .contenedor-galeria{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .galeria-item:nth-child(3) {
+        grid-row-start: span 3;
+    }
+
+    .galeria-item:nth-child(8){
+    grid-column-start: span 2;
+}
+    
+}
+
+
+@media(min-width:1024px){
+    .contenedor-galeria{
+        grid-template-columns: repeat(5, 1fr);
+        width: 90%;
+        margin: auto;
+    }
+
+    .galeria-item:nth-child(3) {
+        grid-row-start: span 3;
+    }
+
+    .galeria-item:nth-child(4){
+        grid-row-start: span 3;
+    }
+
+
+    .galeria-item:nth-child(7){
+        grid-row-start: span 2;
+    }
+
+         .galeria-item:nth-child(8){
+            grid-column-start: span 3;
+         }
+    
+}
